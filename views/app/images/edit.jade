@@ -1,0 +1,14 @@
+extends ../../layout.jade
+block contenido
+  div(class="offset-md-4 col-md-4 remove-float center-block big-top-space")
+    h1 Edit image title
+    form(action="/app/images/#{image.id}/?_method=PUT",method="POST")
+      input(type="hidden" value="PUT", name="_method")
+      div(class="form-group")
+        label(for="title") Title
+        input(type="text", class="form-control", name="title",placeholder="image title...",id="title", value="#{image.title}")
+      div(class="row top-space")
+        div(class="col-xs-12 col-sm-6")
+          input(type="submit" value="Save" class="btn btn-info")
+
+      

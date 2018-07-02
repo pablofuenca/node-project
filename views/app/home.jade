@@ -1,0 +1,12 @@
+extends ../layout.jade
+block contenido
+  // user viene del middleware sessions, los datos del usuario logueado
+  p Hola #{user.email} 
+  for image in images
+    div(class="img-container")
+      h2= image.title
+      img(src="/public/images/#{image._id}.#{image.extension}" class="main-img")
+      if(typeof image.creator != "undefined")
+        p By #{image.creator.email}
+  script(src="/public/js/client.js")
+  

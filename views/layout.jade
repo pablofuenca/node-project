@@ -1,0 +1,18 @@
+doctype html
+html(lang="es")
+  head 
+    title Foto
+    meta(charset="utf-8")
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet")
+    link(href="/public/css/app.css" rel="stylesheet")
+    script(src="/socket.io/socket.io.js")
+  body
+    nav(class="large-padding black white-text")
+      ul
+        li 
+          a(href="/app") Home
+        li 
+          a(href="/app/images/new") Upload image
+        li 
+          a(href="/app/images") My images
+    block contenido

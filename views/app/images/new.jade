@@ -1,0 +1,15 @@
+extends ../../layout.jade
+block contenido
+  div(class="offset-md-4 col-md-4 remove-float center-block big-top-space")
+    h1 Upload new image
+    form(action="/app/images",method="POST", enctype="multipart/form-data")
+      div(class="form-group")
+        label(for="title") Title
+        input(type="text", class="form-control", name="title",placeholder="image title...",id="title")
+      div(class="form-group")
+        label(for="file") Image
+        input(type="file", class="form-control", name="file",id="file")
+      
+      div(class="row top-space")
+        div(class="col-xs-12 col-sm-6")
+          input(type="submit" value="Save" class="btn btn-info")

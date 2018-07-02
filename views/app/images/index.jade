@@ -1,0 +1,13 @@
+extends ../../layout.jade
+block contenido
+  div(class="container")
+    h1 My Images
+    for image in images
+      .white.border.tr.large-padding
+        .row
+          .col-md-10
+            h2=image.title
+          .col-md-2
+            a(href="/app/images/#{image._id}/edit", class="right-space") Edit
+            form(action="/app/images/#{image._id}/?_method=DELETE", class="link", method="POST")
+              input(type="submit" value="Delete")
